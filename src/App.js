@@ -1,23 +1,25 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
 
 function App() {
+  let [inTheStorage, setStorage] = useState('');
+  const [localstorageValue, setLocalstorageValue] = useState('');
+
+  const addedInLocalstorage = () => {
+    localStorage.setItem("testPWL", inTheStorage);
+  }
+
+  const showLocalStorage = () => {
+    setLocalstorageValue(localStorage.getItem("testPWL"))
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>first test</h1>
+      <input type="text" value={inTheStorage} onChange={(e) => setStorage(e.target.value)} /><br />
+      <button onClick={addedInLocalstorage}>added to localstorage</button><br />
+      <button onClick={showLocalStorage}>show what is in localstorage</button>
+      <h2>{localstorageValue}</h2>
     </div>
   );
 }
