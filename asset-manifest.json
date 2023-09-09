@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/testpwa/static/css/main.073c9b0a.css",
+    "main.js": "/testpwa/static/js/main.7b57da89.js",
+    "service-worker.js": "/testpwa/service-worker.js",
+    "index.html": "/testpwa/index.html",
+    "main.073c9b0a.css.map": "/testpwa/static/css/main.073c9b0a.css.map",
+    "main.7b57da89.js.map": "/testpwa/static/js/main.7b57da89.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.7b57da89.js"
+  ]
+}
